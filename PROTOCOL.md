@@ -115,3 +115,20 @@ You can send an IQ query with an `<oa>` tag to ask for `?config`:
 
 The response contains a CDATA body that has a JSON string containing the list
 of devices and their available commands.
+
+
+### Retrieving the current activity
+
+You can send an IQ query with an `<oa>` tag to ask for `?getCurrentActivity`:
+
+    <iq type="get" id="2320426445" from="e01b88af-b4cd-4d1c-8e76-85562ea3fad5">
+      <oa xmlns="connect.logitech.com" mime="vnd.logitech.harmony/vnd.logitech.harmony.engine?getCurrentActivity">
+      </oa>
+    </iq>
+
+The response contains a CDATA body that has a string containing `RESULT=X`
+where X is the activity ID identified in the response from config above.
+
+
+### Additional commands
+ * `?setDisplayDeviceOn` - Unknown action.
