@@ -15,7 +15,7 @@ class HarmonyClient(sleekxmpp.ClientXMPP):
     """An XMPP client for connecting to the Logitech Harmony."""
 
     def __init__(self, auth_token):
-        user = '%s@x.com' % auth_token
+        user = '%s@connect.logitech.com/gatorade.' % auth_token
         password = auth_token
         plugin_config = {
             # Enables PLAIN authentication which is off by default.
