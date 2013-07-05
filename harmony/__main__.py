@@ -38,7 +38,7 @@ def show_config(args):
     client = harmony_client.create_and_connect_client(
         args.harmony_ip, args.harmony_port, token)
     pprint.pprint(client.get_config())
-    client.disconnect(send_close=False)
+    client.disconnect(send_close=True)
     return 0
 
 
